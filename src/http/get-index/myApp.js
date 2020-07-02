@@ -4,7 +4,8 @@ var app = express();
 
 // --> 7)  Mount the Logger middleware here
 app.use( function middleware(req, res, next) {
-  console.log(req)
+  console.log(req.path)
+  console.log(req.method)
   next()
 })
 
